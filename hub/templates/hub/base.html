@@ -3,15 +3,31 @@
 <head>
 <meta charset="utf-8" />
 <title>{% block title %}VideoHub{% endblock %}</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" />
 {% block extra_head %}
 {% endblock %}
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
 
-    {% block extra_body %}
-    {% endblock %}
+<nav class="navbar navbar-dark bg-inverse">
+    <a class="navbar-brand" href="{% url "root" %}">VideoHub</a>
+    <nav class="nav navbar-nav">
+    	<a class="nav-item nav-link">VideoHub 를 통해 ~~~ 를 해보세요.</a>
+    </nav>
+    <nav class="nav navbar-nav pull-xs-right">
+		<a class="nav-item nav-link" href="{% url "root" %}">Home</a>
+    </nav>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+{% block extra_body %}
+{% endblock %}
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
 

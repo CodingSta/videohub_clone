@@ -27,9 +27,9 @@ urlpatterns = [
 
     # Root 로 접속하면, 지정 뷰로 이동
     # 1) lambda 함수로 뷰 지정
-    # url(r'^$', lambda request: redirect('hub:index')),
+    # url(r'^$', lambda request: redirect('hub:index'), name='root'),
     # 2) 함수로 뷰 지정
-    # url(r'^$', redirect_to_hub),
+    # url(r'^$', redirect_to_hub, name='root'),
     # 3) 클래스 기반 뷰 (Class Based View) 로 지정
-    url(r'^$', RedirectView.as_view(pattern_name='hub:index')),
+    url(r'^$', RedirectView.as_view(pattern_name='hub:index'), name='root'),
 ]
