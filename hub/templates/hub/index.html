@@ -1,8 +1,17 @@
-hub/index.html
+{% extends "hub/base.html" %}
 
-<hr/>
+{% block title %}{{ block.super }} :: 글목록{% endblock %}
 
-<a href="{% url "hub:post_detail" 1 %}">1번글로</a>
-<a href="{% url "hub:post_detail" 2 %}">2번글로</a>
-<a href="{% url "hub:post_detail" 3 %}">3번글로</a>
+{% block extra_head %}
+{% endblock %}
+
+{% block content %}
+    hub/index.html
+
+    <hr/>
+
+    <a href="{% url "hub:post_detail" 1 %}">1번글로</a>
+    <a href="{% url "hub:post_detail" 2 %}">2번글로</a>
+    <a href="{% url "hub:post_detail" 3 %}">3번글로</a>
+{% endblock %}
 
