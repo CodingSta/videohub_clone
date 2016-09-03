@@ -124,3 +124,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'videohub_clone', 'static'),
 )
 
+# 배포할 때에만 의미가 있음.
+# 각 디렉토리에 나눠져있는 static 파일들을 아래 지정 디렉토리로 모은다.
+# 모으는 명령 : python manage.py collectstatic
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
